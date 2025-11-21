@@ -1,0 +1,45 @@
+#include <iostream>
+ #include <unistd.h>
+using namespace std;
+int main(){
+char oper=':';
+int hour;
+cout<<"enter an hour\n";
+cin>>hour;
+int min;
+cout<<"enter a minute \n";
+cin>>min;
+int sec;
+cout<<"enter a sec\n";
+cin>>sec;
+
+
+while(true){
+    system("cls");
+    if(sec>59){
+    min++;
+    sec=0;
+    
+    }
+    if(min>59)
+    {
+        hour++;
+        min=0;
+    }
+    if(hour>23)
+    {
+        hour=0;
+        
+    }
+    cout<<hour<<":"<<min<<":"<<sec<<endl;
+    sec++;
+    sleep(1);
+}
+
+
+
+
+
+
+    return 0;
+}
